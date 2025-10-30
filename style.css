@@ -1,0 +1,29 @@
+.kopf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 100vmin;
+  width: 100vmin;
+  
+  transform-origin: 0 0;
+  
+  background: url(https://assets.renderman.pixar.com/Tutorials/photorealistic_head/10088_head.jpg);
+  background-size: cover;
+  
+  /* hier legen wir fest, dass diese Element animiert werden soll */
+  animation-name: quetschen;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* hier wird die Animation definiert; den Namen können wir frei wählen */
+@keyframes quetschen {
+  0% {
+    transform: scaleY(0.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
